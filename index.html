@@ -6,54 +6,99 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Couleurs Hamac - Site en construction</title>
     <style>
-        body {
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+        * {
             margin: 0;
             padding: 0;
-            font-family: Arial, sans-serif;
-            background: #f2f2f2;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f5f7fa;
+            color: #333;
             display: flex;
             justify-content: center;
             align-items: center;
             height: 100vh;
-            color: #333;
+            overflow: hidden;
         }
 
         .container {
             text-align: center;
             background-color: #fff;
-            padding: 50px;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+            animation: fadeIn 1.5s ease-in-out;
         }
 
         h1 {
-            font-size: 48px;
-            color: #1a73e8;
+            font-size: 42px;
+            color: #ff6b6b;
+            font-weight: 600;
+            margin-bottom: 20px;
         }
 
         p {
             font-size: 18px;
             color: #666;
+            margin-bottom: 25px;
         }
 
         .construction-icon {
-            font-size: 100px;
+            font-size: 90px;
             color: #ffcc00;
             margin-bottom: 20px;
-        }
-
-        .contact-info {
-            margin-top: 30px;
+            animation: bounce 2s infinite;
         }
 
         .contact-info a {
-            color: #1a73e8;
+            display: inline-block;
+            background-color: #ff6b6b;
+            color: #fff;
             text-decoration: none;
-            font-weight: bold;
+            padding: 12px 24px;
+            border-radius: 8px;
+            font-weight: 500;
+            transition: background-color 0.3s ease;
         }
 
         .contact-info a:hover {
-            text-decoration: underline;
+            background-color: #ff5252;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% {
+                transform: translateY(0);
+            }
+
+            40% {
+                transform: translateY(-15px);
+            }
+
+            60% {
+                transform: translateY(-7px);
+            }
+        }
+
+        .footer {
+            margin-top: 40px;
+            font-size: 14px;
+            color: #888;
         }
     </style>
 </head>
@@ -62,10 +107,13 @@
     <div class="container">
         <div class="construction-icon">🚧</div>
         <h1>Site en construction</h1>
-        <p>Notre site web <strong>Couleurs Hamac</strong> est actuellement en construction.</p>
-        <p>Revenez bientôt pour découvrir nos nouveautés colorées !</p>
+        <p>Notre site <strong>Couleurs Hamac</strong> sera bientôt disponible avec de nouvelles surprises.</p>
+        <p>En attendant, n'hésitez pas à nous contacter pour plus d'informations.</p>
         <div class="contact-info">
-            <p>Pour toute information, veuillez nous contacter à : <a href="mailto:contact@couleurshamac.com">contact@couleurshamac.com</a></p>
+            <a href="mailto:contact@couleurshamac.com">Contactez-nous</a>
+        </div>
+        <div class="footer">
+            © 2024 Couleurs Hamac. Tous droits réservés.
         </div>
     </div>
 </body>
